@@ -12,7 +12,7 @@ const NotesListPage = () => {
   }, [])
 
   let getNotes = async () => {
-    let response = await fetch('/api/notes/')
+    let response = await fetch('https://mnotesapp.herokuapp.com/api/notes/')
     let data = await response.json()
     setNotes(data)
   }

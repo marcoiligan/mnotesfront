@@ -15,13 +15,13 @@ const NotePage = () => {
 
   let getNote = async () => {
     if(noteId.id === 'new') return
-    let response = await fetch(`/api/notes/${noteId.id}`)
+    let response = await fetch(`https://mnotesapp.herokuapp.com/api/notes/${noteId.id}`)
     let data = await response.json()
     setNote(data)
   }
 
   let createNote = async () => {
-    await fetch(`/api/notes/`, {
+    await fetch(`https://mnotesapp.herokuapp.com/api/notes/`, {
       method:'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ const NotePage = () => {
   }
 
   let updateNote = async () => {
-    await fetch(`/api/notes/${noteId.id}/`, {
+    await fetch(`https://mnotesapp.herokuapp.com/api/notes/${noteId.id}/`, {
       method:"PUT",
       headers: {
         'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ const NotePage = () => {
   }
 
   let deleteNote = async () => {
-    await fetch(`/api/notes/${noteId.id}/`, {
+    await fetch(`https://mnotesapp.herokuapp.com/api/notes/${noteId.id}/`, {
       method:'DELETE',
       headers: {
         'Content-Type': 'application/json'
