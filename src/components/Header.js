@@ -1,4 +1,4 @@
-
+import React from 'react'
 import {ReactComponent as Moon} from '../assets/moon.svg'
 
 const Header = () => {
